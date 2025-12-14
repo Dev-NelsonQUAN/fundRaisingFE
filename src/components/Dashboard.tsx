@@ -7,7 +7,6 @@ import { Activity, Zap, Target } from "lucide-react";
 
 const FUNDRAISING_TARGET = 800000000;
 
-// Refactored to match MetricCard structure exactly
 function TargetMetricCard({ targetValue }: { targetValue: number }) {
   const formattedTarget = new Intl.NumberFormat("en-NG", {
     style: "currency",
@@ -20,15 +19,12 @@ function TargetMetricCard({ targetValue }: { targetValue: number }) {
       className="metric-card group relative animate-fade-in"
       style={{ animationDelay: "0.2s" }}
     >
-      {/* Hover Background Effect */}
       <div className="absolute inset-0 opacity-0 transition-opacity duration-300 group-hover:opacity-100 bg-gradient-to-br from-indigo-500/5 to-transparent" />
 
-      {/* Top Right Icon - Aligned with MetricCard */}
       <div className="absolute right-4 top-4 flex h-8 w-8 sm:h-12 sm:w-12 items-center justify-center rounded-xl bg-indigo-500/10 text-indigo-500">
         <Target className="h-4 w-4 sm:h-6 sm:w-6" />
       </div>
 
-      {/* Main Content */}
       <div className="relative z-10 flex flex-col gap-3">
         <div className="flex items-center gap-2">
           <span className="text-sm font-medium uppercase tracking-wider text-muted-foreground">
@@ -48,7 +44,6 @@ function TargetMetricCard({ targetValue }: { targetValue: number }) {
         </div>
       </div>
 
-      {/* The Bottom Gradient Bar */}
       <div className="absolute bottom-0 left-0 h-1 w-full bg-gradient-to-r from-indigo-500/50 to-transparent" />
     </div>
   );
